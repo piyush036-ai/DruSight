@@ -1,0 +1,47 @@
+{
+  "modelId": "duquenois-001-clf",
+  "modelVersion": "1.0.0",
+  "kitId": "DUQUENOIS-001",
+  "featureSchemaVersion": "features-0.1.0",
+  "featureNames": [
+    "mean_r",
+    "mean_g",
+    "mean_b",
+    "median_r",
+    "median_g",
+    "median_b",
+    "std_r",
+    "std_g",
+    "std_b",
+    "hue_circular_mean",
+    "hue_std",
+    "saturation_mean",
+    "value_mean",
+    "lab_l",
+    "lab_a",
+    "lab_b",
+    "delta_e_from_reference",
+    "spatial_uniformity",
+    "edge_density",
+    "p05_luminance",
+    "p95_luminance"
+  ],
+  "inputShape": [
+    1,
+    21
+  ],
+  "inputDtype": "float32",
+  "classOrder": [
+    "NEGATIVE",
+    "POSITIVE"
+  ],
+  "assetPath": "assets/models/duquenois-001-clf_1.0.0.onnx",
+  "sha256": "5ba3c719f672be7ebb4b10f63c71fba873dea66f0ce762466caface8834b0518",
+  "validationStatus": "Literature-derived training data (UNODC ST/NAR/42 + SWGDRUG). Not validated on physical samples. For prototype demonstration only.",
+  "deploymentChecklist": [
+    "Copy C:\\SIHDRUG NEW\\drusight\\ml_training\\experiments\\DUQUENOIS-001\\onnx\\duquenois-001-clf_1.0.0.onnx to drusight/assets/models/",
+    "Insert a row into the model_versions table with this sha256",
+    "Set modelId='duquenois-001-clf' and modelVersion='1.0.0' in the kit profile JSON",
+    "Register OnnxClassifierService in lib/app/service_locator.dart in place of MockClassifierService"
+  ]
+}

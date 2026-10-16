@@ -1,0 +1,84 @@
+{
+  "kitId": "MECKE-001",
+  "profileVersion": "1.0.0",
+  "manufacturer": "Mecke Reagent (selenious acid + H2SO4) — Standard forensic spot test",
+  "testName": "Mecke Reagent Spot Test",
+  "reagentType": "MECKE_COLOURIMETRIC",
+  "validationStatus": "Prototype — colour regions from UNODC ST/NAR/42 (2013) Table 4 and Mecke (1899) Pharm Zentralhalle. Differentiates opiates (blue-green/black), MDMA (blue-green), ketamine (orange-yellow). Not a validated diagnostic instrument.",
+  "lastVerifiedDate": "2026-01-01",
+  "documentationUrl": "https://www.unodc.org/documents/scientific/ST-NAR-42_Ebook.pdf",
+  "featureSchemaVersion": "features-0.1.0",
+  "calibrationVersion": "calib-0.1.0",
+  "modelId": "mecke-001-clf",
+  "modelVersion": "1.0.0",
+  "referenceCard": {
+    "cardId": "DS-CARD-DIGITAL",
+    "version": "1.0.0",
+    "description": "Software-rendered 8-patch digital reference card displayed on-screen.",
+    "aspectRatio": 3.2,
+    "printNotes": "No printing required. Display on a second device beside the sample.",
+    "patches": [
+      { "id": "white",    "expectedSrgb": [235, 235, 235], "x": 0.0125, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "grey_75",  "expectedSrgb": [190, 190, 190], "x": 0.2625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "grey_50",  "expectedSrgb": [128, 128, 128], "x": 0.2625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "black",    "expectedSrgb": [ 40,  40,  40], "x": 0.7625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "red",      "expectedSrgb": [192,  57,  43], "x": 0.0125, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "green",    "expectedSrgb": [ 39, 174,  96], "x": 0.2625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "blue",     "expectedSrgb": [ 41, 128, 185], "x": 0.5125, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "yellow",   "expectedSrgb": [241, 196,  15], "x": 0.7625, "y": 0.10, "w": 0.225, "h": 0.80 }
+    ]
+  },
+  "qualityThresholds": {
+    "minBlurVariance": 25.0,
+    "maxGlareFraction": 0.04,
+    "maxShadowClippedFraction": 0.05,
+    "maxHighlightClippedFraction": 0.05,
+    "minMeanLuminance": 35.0,
+    "maxMeanLuminance": 225.0,
+    "minDynamicRange": 50.0,
+    "maxCalibrationResidualDeltaE": 12.0,
+    "minRegionConfidence": 0.45,
+    "minImageWidthPx": 480,
+    "minCardCoverageFraction": 0.05
+  },
+  "reactionWindow": {
+    "enabled": false,
+    "captureOffsetsSeconds": [],
+    "stabilityDeltaE": 2.0,
+    "observationNotes": "Mecke reaction is fast — most colour change occurs within 30 seconds. Capture when colour has stabilised."
+  },
+  "decisionRegions": [
+    {
+      "label": "NEGATIVE",
+      "centreLab": [80.0, 0.0, 5.0],
+      "radiusDeltaE": 28.0,
+      "borderlineMarginDeltaE": 6.0
+    },
+    {
+      "label": "POSITIVE",
+      "centreLab": [22.0, -12.0, -15.0],
+      "radiusDeltaE": 32.0,
+      "borderlineMarginDeltaE": 6.0
+    },
+    {
+      "label": "POSITIVE",
+      "centreLab": [50.0, 18.0, 38.0],
+      "radiusDeltaE": 28.0,
+      "borderlineMarginDeltaE": 6.0
+    }
+  ],
+  "captureInstructions": [
+    "Add 1-2 drops of Mecke reagent to a small sample on a white ceramic surface.",
+    "Observe colour change within 30-60 seconds: blue-green/black = opiates, blue-green = MDMA, orange = ketamine.",
+    "Display the Digital Reference Card on a second device beside the sample.",
+    "Frame both the reaction area and the digital card within their guides.",
+    "Press CHECK FRAME until the guard accepts, then press CAPTURE."
+  ],
+  "safetyNotes": [
+    "Mecke reagent contains selenious acid and concentrated sulfuric acid. Selenium compounds are highly toxic.",
+    "Wear nitrile gloves, safety goggles, and a lab coat. Work in a fume hood.",
+    "Selenium waste requires specialist disposal — do not pour down drains.",
+    "Black/dark blue = opiates. Blue-green = MDMA/MDA. Orange-yellow = ketamine. Results are presumptive only.",
+    "Confirmatory laboratory analysis is mandatory before any legal proceedings under NDPS Act."
+  ]
+}

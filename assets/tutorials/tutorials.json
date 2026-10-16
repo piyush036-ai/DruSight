@@ -1,0 +1,83 @@
+{
+  "version": "0.1.0",
+  "lessons": [
+    {
+      "title": "Positioning the test kit and reference card",
+      "steps": [
+        "Lay the used test kit flat on a plain, non-reflective surface.",
+        "Place the reference card in the SAME plane as the reaction area, directly beside it.",
+        "Both must be in one frame: the card is the measurement reference for that specific exposure.",
+        "Do not photograph the card separately and the sample separately. The transform is only valid for the frame it was estimated from."
+      ]
+    },
+    {
+      "title": "Lighting",
+      "steps": [
+        "Use even, diffuse light. Open shade outdoors is better than direct sun.",
+        "Avoid a single bare bulb or a phone torch at close range; both create a specular highlight the glare gate will reject.",
+        "Avoid mixed lighting, for example daylight through a window plus a fluorescent tube, where different parts of the frame sit under different illuminants.",
+        "Do not let your own shadow, or the phone's, fall across the card or the sample."
+      ]
+    },
+    {
+      "title": "Distance and angle",
+      "steps": [
+        "Hold the phone roughly 20-30 cm from the surface.",
+        "Keep the sensor plane parallel to the surface. A tilted shot makes the card patches trapezoidal and the sampled areas wrong.",
+        "Move closer if the app says the card occupies too little of the frame: small patches are averaged over too few pixels to be a useful reference."
+      ]
+    },
+    {
+      "title": "Avoiding blur",
+      "steps": [
+        "Brace your elbows or rest the phone against a stable object.",
+        "Let autofocus settle before capturing.",
+        "Use CHECK FRAME: it reports the measured sharpness against the kit profile's threshold rather than leaving you to judge by eye."
+      ]
+    },
+    {
+      "title": "Reading the result",
+      "steps": [
+        "PRESUMPTIVE POSITIVE means the calibrated colour fell inside the kit profile's positive region and every quality check passed.",
+        "PRESUMPTIVE NEGATIVE means the same for the negative region.",
+        "INCONCLUSIVE means the system declined to report an outcome. It is a valid, useful result, not a failure.",
+        "Every result requires confirmatory laboratory testing regardless of which of the three it is."
+      ]
+    },
+    {
+      "title": "Understanding reliability status",
+      "steps": [
+        "PASS: all measured values were within the kit profile's limits.",
+        "REVIEW REQUIRED: something needs a human to look at it - a borderline colour, a quality value outside limits, or a disagreement between the model and the profile rules.",
+        "RECAPTURE REQUIRED: a blocking problem such as a missing card or failed calibration. No colour measurement was reported.",
+        "The status is a three-state indicator, not a percentage. No validation data exists that would justify a numeric reliability score."
+      ]
+    },
+    {
+      "title": "What anomalies mean",
+      "steps": [
+        "Each anomaly is a named code attached to a measurement and the threshold it crossed.",
+        "An anomaly describes what was observed. It never asserts a cause and never asserts intent.",
+        "ANOMALY_LOCATION_INTEGRITY in particular means only that distance and elapsed time between two records imply an unusual speed. Poor GPS, a clock change and legitimate fast travel all produce it."
+      ]
+    },
+    {
+      "title": "The evidence record",
+      "steps": [
+        "Every completed test produces a record containing identity, context, result, versions and integrity values.",
+        "The original image is hashed with SHA-256 the moment it is written, and is never modified.",
+        "Each record commits to the previous record's hash, so altering any historical record breaks the chain from that point on.",
+        "The record is signed with an Ed25519 key generated on this device and held in platform secure storage.",
+        "Signing shows a record has not changed since creation. It does not prove the real-world time of capture, and it does not prove which institution the key belongs to."
+      ]
+    },
+    {
+      "title": "Safety",
+      "steps": [
+        "Follow the kit manufacturer's handling, PPE and disposal instructions in full.",
+        "Keep the reference card clear of reagents and samples.",
+        "Retain the physical sample and follow your organisation's procedure for laboratory submission."
+      ]
+    }
+  ]
+}

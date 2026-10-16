@@ -1,0 +1,9 @@
+patch_id,nominal_r,nominal_g,nominal_b,measured_r,measured_g,measured_b,measured_date,instrument
+grey_05,242,242,242,,,,,
+grey_35,178,178,178,,,,,
+grey_65,105,105,105,,,,,
+grey_95,38,38,38,,,,,
+red,190,45,45,,,,,
+green,50,150,75,,,,,
+blue,45,75,170,,,,,
+yellow,225,190,55,,,,,

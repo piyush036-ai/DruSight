@@ -1,0 +1,77 @@
+{
+  "kitId": "DS-DEMO-001",
+  "profileVersion": "1.0.0",
+  "manufacturer": "DEMONSTRATION PROFILE - not a commercial product",
+  "testName": "Generic colourimetric spot test (demonstration profile)",
+  "reagentType": "GENERIC_COLOURIMETRIC",
+  "validationStatus": "UNVALIDATED DEMONSTRATION PROFILE. The colour regions and thresholds below are illustrative values chosen to exercise the pipeline. They are NOT derived from characterised samples and MUST NOT be used to interpret a real field test. See docs/VALIDATION_PLAN.md.",
+  "lastVerifiedDate": null,
+  "documentationUrl": null,
+  "featureSchemaVersion": "features-0.1.0",
+  "calibrationVersion": "calib-0.1.0",
+  "modelId": null,
+  "modelVersion": null,
+  "referenceCard": {
+    "cardId": "DS-CARD-A",
+    "version": "1.0.0",
+    "description": "Eight-patch reference card: a four-step neutral grey ramp plus four saturated primaries. The grey ramp constrains the exposure and tone terms of the fit; the primaries constrain the channel-mixing terms.",
+    "aspectRatio": 3.2,
+    "printNotes": "Print on matte stock at 100% scale. Glossy paper produces specular highlights that the glare gate will reject. Verify printed patches against the sRGB values in this profile before field use; an uncharacterised card makes every measurement taken with it uncharacterised.",
+    "patches": [
+      { "id": "grey_05", "expectedSrgb": [242, 242, 242], "x": 0.0125, "y": 0.10, "w": 0.2250, "h": 0.35 },
+      { "id": "grey_35", "expectedSrgb": [178, 178, 178], "x": 0.2625, "y": 0.10, "w": 0.2250, "h": 0.35 },
+      { "id": "grey_65", "expectedSrgb": [105, 105, 105], "x": 0.5125, "y": 0.10, "w": 0.2250, "h": 0.35 },
+      { "id": "grey_95", "expectedSrgb": [ 38,  38,  38], "x": 0.7625, "y": 0.10, "w": 0.2250, "h": 0.35 },
+      { "id": "red",     "expectedSrgb": [190,  45,  45], "x": 0.0125, "y": 0.55, "w": 0.2250, "h": 0.35 },
+      { "id": "green",   "expectedSrgb": [ 50, 150,  75], "x": 0.2625, "y": 0.55, "w": 0.2250, "h": 0.35 },
+      { "id": "blue",    "expectedSrgb": [ 45,  75, 170], "x": 0.5125, "y": 0.55, "w": 0.2250, "h": 0.35 },
+      { "id": "yellow",  "expectedSrgb": [225, 190,  55], "x": 0.7625, "y": 0.55, "w": 0.2250, "h": 0.35 }
+    ]
+  },
+  "qualityThresholds": {
+    "minBlurVariance": 25.0,
+    "maxGlareFraction": 0.02,
+    "maxShadowClippedFraction": 0.03,
+    "maxHighlightClippedFraction": 0.03,
+    "minMeanLuminance": 45.0,
+    "maxMeanLuminance": 215.0,
+    "minDynamicRange": 60.0,
+    "maxCalibrationResidualDeltaE": 12.0,
+    "minRegionConfidence": 0.45,
+    "minImageWidthPx": 480,
+    "minCardCoverageFraction": 0.05
+  },
+  "reactionWindow": {
+    "enabled": false,
+    "captureOffsetsSeconds": [],
+    "stabilityDeltaE": 1.5,
+    "observationNotes": "This demonstration profile uses a single capture. A kit whose reaction evolves should enable the timed window and set offsets from the manufacturer's instructions."
+  },
+  "decisionRegions": [
+    {
+      "label": "NEGATIVE",
+      "centreLab": [78.0, 2.0, 6.0],
+      "radiusDeltaE": 28.0,
+      "borderlineMarginDeltaE": 6.0
+    },
+    {
+      "label": "POSITIVE",
+      "centreLab": [32.0, 18.0, -42.0],
+      "radiusDeltaE": 28.0,
+      "borderlineMarginDeltaE": 6.0
+    }
+  ],
+  "captureInstructions": [
+    "Perform the physical field test exactly as the kit manufacturer specifies. DruSight does not replace the kit.",
+    "Place the DS-CARD-A reference card flat, in the same plane as the reaction area and under the same light.",
+    "Frame so that BOTH the reaction area and the whole reference card are inside their on-screen guides.",
+    "Avoid direct sunlight or a bare bulb reflecting off the sample; move to even, diffuse light.",
+    "Hold the phone steady and parallel to the surface, roughly 20-30 cm away.",
+    "Use CHECK FRAME until the guard accepts the capture, then press CAPTURE."
+  ],
+  "safetyNotes": [
+    "Follow the kit manufacturer's handling, PPE and disposal instructions in full.",
+    "Do not attempt to read the result through the phone screen instead of following your own procedure.",
+    "A presumptive result never substitutes for confirmatory laboratory analysis."
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "manifestVersion": "1",
+  "entries": [
+    "kb_colourimetric_presumptive_testing.json",
+    "kb_reference_card_calibration.json",
+    "kb_confirmatory_testing.json"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "entryId": "kb-confirmatory-testing",
+  "title": "Presumptive versus confirmatory analysis",
+  "aliases": ["confirmatory", "laboratory confirmation", "GC-MS"],
+  "classification": "Process background",
+  "relatedKitIds": [],
+  "sections": [
+    {
+      "heading": "The distinction",
+      "body": "A presumptive test indicates whether a sample is consistent with a class of substance. A confirmatory analysis, performed in an accredited laboratory using instrumental methods, is what establishes identity. The two are not interchangeable and a presumptive result does not become confirmatory by being measured more precisely."
+    },
+    {
+      "heading": "What DruSight is and is not",
+      "body": "DruSight is a digital companion for presumptive field testing. It is not a confirmatory identification system, it is not a validated diagnostic instrument, and no accuracy, sensitivity or specificity figure is claimed for it anywhere in the application. Where such a figure would normally appear, the app displays the reason it is absent instead."
+    },
+    {
+      "heading": "Why every result carries a disclaimer",
+      "body": "The disclaimer is not legal boilerplate. A calibrated number carries an air of authority that a subjective visual reading does not, and that authority is exactly what would make an unqualified presumptive result dangerous. The disclaimer is displayed on every result surface and cannot be dismissed."
+    }
+  ],
+  "safetyNotes": [
+    "Retain the physical sample and follow your organisation's evidence-handling procedure for laboratory submission."
+  ],
+  "source": "DruSight project documentation, informed by the NIST review of forensic seized-drug analysis (challenges and emerging analytical solutions).",
+  "sourceVersion": "0.1.0",
+  "lastVerifiedDate": null
+}

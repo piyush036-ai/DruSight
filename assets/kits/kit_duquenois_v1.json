@@ -1,0 +1,78 @@
+{
+  "kitId": "DUQUENOIS-001",
+  "profileVersion": "1.0.0",
+  "manufacturer": "Duquenois-Levine Reagent — Standard forensic spot test for cannabis",
+  "testName": "Duquenois-Levine Spot Test (Cannabis)",
+  "reagentType": "DUQUENOIS_COLOURIMETRIC",
+  "validationStatus": "Prototype — colour regions from UNODC ST/NAR/42 (2013) Table 3, Duquenois & Moustapha (1937), and Levine (1969) J AOAC. Purple-to-blue colouration in chloroform layer is presumptive for cannabis. Not a validated diagnostic instrument.",
+  "lastVerifiedDate": "2026-01-01",
+  "documentationUrl": "https://www.unodc.org/documents/scientific/ST-NAR-42_Ebook.pdf",
+  "featureSchemaVersion": "features-0.1.0",
+  "calibrationVersion": "calib-0.1.0",
+  "modelId": "duquenois-001-clf",
+  "modelVersion": "1.0.0",
+  "referenceCard": {
+    "cardId": "DS-CARD-DIGITAL",
+    "version": "1.0.0",
+    "description": "Software-rendered 8-patch digital reference card displayed on-screen.",
+    "aspectRatio": 3.2,
+    "printNotes": "No printing required. Display on a second device beside the sample.",
+    "patches": [
+      { "id": "white",    "expectedSrgb": [235, 235, 235], "x": 0.0125, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "grey_75",  "expectedSrgb": [190, 190, 190], "x": 0.2625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "grey_50",  "expectedSrgb": [128, 128, 128], "x": 0.2625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "black",    "expectedSrgb": [ 40,  40,  40], "x": 0.7625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "red",      "expectedSrgb": [192,  57,  43], "x": 0.0125, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "green",    "expectedSrgb": [ 39, 174,  96], "x": 0.2625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "blue",     "expectedSrgb": [ 41, 128, 185], "x": 0.5125, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "yellow",   "expectedSrgb": [241, 196,  15], "x": 0.7625, "y": 0.10, "w": 0.225, "h": 0.80 }
+    ]
+  },
+  "qualityThresholds": {
+    "minBlurVariance": 25.0,
+    "maxGlareFraction": 0.04,
+    "maxShadowClippedFraction": 0.05,
+    "maxHighlightClippedFraction": 0.05,
+    "minMeanLuminance": 35.0,
+    "maxMeanLuminance": 225.0,
+    "minDynamicRange": 50.0,
+    "maxCalibrationResidualDeltaE": 12.0,
+    "minRegionConfidence": 0.45,
+    "minImageWidthPx": 480,
+    "minCardCoverageFraction": 0.05
+  },
+  "reactionWindow": {
+    "enabled": true,
+    "captureOffsetsSeconds": [0, 5, 10, 20, 30, 60],
+    "stabilityDeltaE": 2.0,
+    "observationNotes": "The Duquenois-Levine reaction develops over 1-2 minutes. Capturing at multiple offsets gives the full trajectory, improving confidence in borderline cases."
+  },
+  "decisionRegions": [
+    {
+      "label": "NEGATIVE",
+      "centreLab": [78.0, 0.0, 6.0],
+      "radiusDeltaE": 28.0,
+      "borderlineMarginDeltaE": 6.0
+    },
+    {
+      "label": "POSITIVE",
+      "centreLab": [32.0, 22.0, -35.0],
+      "radiusDeltaE": 32.0,
+      "borderlineMarginDeltaE": 6.0
+    }
+  ],
+  "captureInstructions": [
+    "Step 1: Add 5 drops of Solution A (vanillin + acetaldehyde + ethanol) to a small sample.",
+    "Step 2: Add 3 drops of Solution B (concentrated HCl). Mix gently — purple colour forms if cannabis present.",
+    "Step 3: Add 5 drops of chloroform (Solution C). Shake. Purple-blue organic layer = presumptive positive.",
+    "Display the Digital Reference Card on a second device beside the sample.",
+    "The app captures at 0, 5, 10, 20, 30, 60 seconds to track colour development.",
+    "Keep the camera steady throughout the timed sequence."
+  ],
+  "safetyNotes": [
+    "Contains concentrated HCl and chloroform. Work in a fume hood or well-ventilated area with PPE.",
+    "Chloroform is a suspected carcinogen and CNS depressant. Minimise exposure.",
+    "This test is specific for cannabis plant material (THC). Hash, resin and plant material all give positive.",
+    "A positive is presumptive only. GC-MS confirmation is required under NDPS Act provisions."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "entryId": "kb-colourimetric-presumptive-testing",
+  "title": "Colourimetric presumptive field testing",
+  "aliases": ["spot test", "colour test", "presumptive test"],
+  "classification": "Method background",
+  "relatedKitIds": ["DS-DEMO-001", "DS-DEMO-002"],
+  "sections": [
+    {
+      "heading": "What a colour test establishes",
+      "body": "A colourimetric field test reports that a sample produced, or did not produce, a colour change consistent with a reagent's expected reaction. It narrows possibilities. It does not identify a substance, and a positive reaction can arise from compounds other than the one of interest."
+    },
+    {
+      "heading": "Known sources of subjectivity",
+      "body": "Interpretation by eye is affected by ambient lighting colour and intensity, the observer's colour vision, the angle of view, the background the sample sits on, and how long after reagent contact the reading is taken. Two trained operators can read the same reaction differently under different light."
+    },
+    {
+      "heading": "What DruSight adds",
+      "body": "DruSight does not replace the physical kit or the reagent chemistry. It standardises the image capture, estimates and removes the device-and-illumination colour transform using a reference card, measures the reaction colour numerically, records which quality checks passed, and produces a signed, hash-chained record of all of it. The chemistry and its limitations are unchanged."
+    },
+    {
+      "heading": "Why a result may be reported as inconclusive",
+      "body": "The system reports INCONCLUSIVE rather than guessing whenever calibration fails, the reference card is missing or occluded, image quality falls outside the kit profile's limits, the measured colour sits near a decision boundary, the reaction had not stabilised, or the input falls outside the conditions the system supports."
+    }
+  ],
+  "safetyNotes": [
+    "Always follow the kit manufacturer's handling, PPE and disposal instructions.",
+    "Treat every presumptive result as requiring confirmatory laboratory analysis."
+  ],
+  "source": "DruSight project documentation, written from general analytical-chemistry background and the limitations discussed in the NIST review of forensic seized-drug analysis.",
+  "sourceVersion": "0.1.0",
+  "lastVerifiedDate": null
+}

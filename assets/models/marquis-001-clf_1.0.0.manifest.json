@@ -1,0 +1,47 @@
+{
+  "modelId": "marquis-001-clf",
+  "modelVersion": "1.0.0",
+  "kitId": "MARQUIS-001",
+  "featureSchemaVersion": "features-0.1.0",
+  "featureNames": [
+    "mean_r",
+    "mean_g",
+    "mean_b",
+    "median_r",
+    "median_g",
+    "median_b",
+    "std_r",
+    "std_g",
+    "std_b",
+    "hue_circular_mean",
+    "hue_std",
+    "saturation_mean",
+    "value_mean",
+    "lab_l",
+    "lab_a",
+    "lab_b",
+    "delta_e_from_reference",
+    "spatial_uniformity",
+    "edge_density",
+    "p05_luminance",
+    "p95_luminance"
+  ],
+  "inputShape": [
+    1,
+    21
+  ],
+  "inputDtype": "float32",
+  "classOrder": [
+    "NEGATIVE",
+    "POSITIVE"
+  ],
+  "assetPath": "assets/models/marquis-001-clf_1.0.0.onnx",
+  "sha256": "5ef2ee3c5fa6e5fcbfb16861071a3d9e238dfb519d1602c14bd1c9efc3373f4c",
+  "validationStatus": "Literature-derived training data (UNODC ST/NAR/42 + SWGDRUG). Not validated on physical samples. For prototype demonstration only.",
+  "deploymentChecklist": [
+    "Copy C:\\SIHDRUG NEW\\drusight\\ml_training\\experiments\\MARQUIS-001\\onnx\\marquis-001-clf_1.0.0.onnx to drusight/assets/models/",
+    "Insert a row into the model_versions table with this sha256",
+    "Set modelId='marquis-001-clf' and modelVersion='1.0.0' in the kit profile JSON",
+    "Register OnnxClassifierService in lib/app/service_locator.dart in place of MockClassifierService"
+  ]
+}

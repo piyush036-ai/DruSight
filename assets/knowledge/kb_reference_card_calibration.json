@@ -1,0 +1,31 @@
+{
+  "entryId": "kb-reference-card-calibration",
+  "title": "Why a reference card is required",
+  "aliases": ["colour card", "calibration card", "colour checker"],
+  "classification": "Measurement background",
+  "relatedKitIds": ["DS-DEMO-001", "DS-DEMO-002"],
+  "sections": [
+    {
+      "heading": "A camera does not measure colour",
+      "body": "A phone camera records scene radiance filtered through an unknown illuminant, an automatic white balance, an automatic exposure and a manufacturer-specific tone curve. The same reaction photographed on two phones, or on one phone under two lights, produces different pixel values. Classifying raw RGB would therefore be classifying the lighting as much as the chemistry."
+    },
+    {
+      "heading": "What the card does",
+      "body": "The reference card carries patches whose true colours are known. Photographing them alongside the sample lets the app estimate the combined transform the camera applied, and invert it. The correction is fitted in linear light, because illumination scaling and sensor channel cross-talk are linear there and are not linear in the gamma-encoded values the camera outputs."
+    },
+    {
+      "heading": "Calibration quality is reported, not assumed",
+      "body": "After fitting, the app applies the transform back to the card's own patches and measures how far each corrected patch sits from its known value, as a CIEDE2000 distance. That residual is shown with every result. If it exceeds the kit profile's limit, no colour measurement is reported at all."
+    },
+    {
+      "heading": "Printing and caring for the card",
+      "body": "Print on matte stock at 100% scale; glossy stock produces specular highlights that the glare gate will reject. Keep the card clean and unfaded, and keep it flat and in the same plane and light as the reaction area. A worn or uncharacterised card makes every measurement taken with it uncharacterised."
+    }
+  ],
+  "safetyNotes": [
+    "Keep the reference card out of contact with reagents and samples; contaminate it and every later measurement is affected."
+  ],
+  "source": "DruSight project documentation, colour-science method notes.",
+  "sourceVersion": "0.1.0",
+  "lastVerifiedDate": null
+}

@@ -1,0 +1,47 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Android
+android/.gradle/
+android/local.properties
+android/key.properties
+*.jks
+*.keystore
+
+# Secrets - nothing cryptographic belongs in git.
+*.pem
+*.key
+private_key*
+signing_key*
+
+# ML training artefacts (data is provenance-controlled; do not commit).
+ml_training/data/raw/*
+!ml_training/data/raw/.gitkeep
+ml_training/data/processed/*
+!ml_training/data/processed/.gitkeep
+ml_training/data/features/*
+!ml_training/data/features/.gitkeep
+ml_training/data/splits/*
+!ml_training/data/splits/.gitkeep
+ml_training/experiments/*
+!ml_training/experiments/.gitkeep
+ml_training/models/*.onnx
+ml_training/reports/*
+!ml_training/reports/.gitkeep
+__pycache__/
+*.pyc
+.venv/
+
+# Generated reference cards - rebuild with tools/make_reference_card.py.
+# The PDFs are kept, since the print sheet is the deliverable people need.
+!reference_cards/

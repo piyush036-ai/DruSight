@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160.0mm" height="50.0mm" viewBox="0 0 160.0 50.0">
+  <title>DS-CARD-A v1.0.0</title>
+  <rect x="0" y="0" width="160.0" height="50.0" fill="#ffffff"/>
+  <rect x="2.0000" y="5.0000" width="36.0000" height="17.5000" fill="#f2f2f2" data-patch-id="grey_05"/>
+  <rect x="42.0000" y="5.0000" width="36.0000" height="17.5000" fill="#b2b2b2" data-patch-id="grey_35"/>
+  <rect x="82.0000" y="5.0000" width="36.0000" height="17.5000" fill="#696969" data-patch-id="grey_65"/>
+  <rect x="122.0000" y="5.0000" width="36.0000" height="17.5000" fill="#262626" data-patch-id="grey_95"/>
+  <rect x="2.0000" y="27.5000" width="36.0000" height="17.5000" fill="#be2d2d" data-patch-id="red"/>
+  <rect x="42.0000" y="27.5000" width="36.0000" height="17.5000" fill="#32964b" data-patch-id="green"/>
+  <rect x="82.0000" y="27.5000" width="36.0000" height="17.5000" fill="#2d4baa" data-patch-id="blue"/>
+  <rect x="122.0000" y="27.5000" width="36.0000" height="17.5000" fill="#e1be37" data-patch-id="yellow"/>
+  <rect x="0" y="0" width="160.0" height="50.0" fill="none" stroke="#000000" stroke-width="0.1"/>
+</svg>

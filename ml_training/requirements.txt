@@ -1,0 +1,12 @@
+# Pinned loosely: these are the versions the pipeline was developed against.
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+matplotlib>=3.8
+joblib>=1.3
+
+# Export only. Install when you actually export a model; the training and
+# evaluation scripts do not import them.
+# skl2onnx>=1.16
+# onnx>=1.15
+# onnxruntime>=1.17

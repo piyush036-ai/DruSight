@@ -1,0 +1,84 @@
+{
+  "kitId": "MARQUIS-001",
+  "profileVersion": "1.0.0",
+  "manufacturer": "Marquis Reagent (H2SO4 + formaldehyde) — Standard forensic spot test",
+  "testName": "Marquis Reagent Spot Test",
+  "reagentType": "MARQUIS_COLOURIMETRIC",
+  "validationStatus": "Prototype — colour regions derived from UNODC ST/NAR/42 (2013) Table 1 and Ebejer et al. (2011) Forensic Sci Int. Lab values cross-referenced with DEA Color Chart Series. Not a validated diagnostic instrument. Confirmatory GC-MS required.",
+  "lastVerifiedDate": "2026-01-01",
+  "documentationUrl": "https://www.unodc.org/documents/scientific/ST-NAR-42_Ebook.pdf",
+  "featureSchemaVersion": "features-0.1.0",
+  "calibrationVersion": "calib-0.1.0",
+  "modelId": "marquis-001-clf",
+  "modelVersion": "1.0.0",
+  "referenceCard": {
+    "cardId": "DS-CARD-DIGITAL",
+    "version": "1.0.0",
+    "description": "Software-rendered 8-patch digital reference card displayed on-screen. Patches are rendered by the app in the device native colour space. Use only in DIGITAL CARD mode — the camera reads the on-screen patches directly.",
+    "aspectRatio": 3.2,
+    "printNotes": "No printing required. Open the Digital Reference Card screen on a second phone or tablet and place it next to the sample. The card auto-adjusts brightness for consistent readings.",
+    "patches": [
+      { "id": "white",    "expectedSrgb": [235, 235, 235], "x": 0.0125, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "grey_75",  "expectedSrgb": [190, 190, 190], "x": 0.2625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "grey_50",  "expectedSrgb": [128, 128, 128], "x": 0.2625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "black",    "expectedSrgb": [ 40,  40,  40], "x": 0.7625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "red",      "expectedSrgb": [192,  57,  43], "x": 0.0125, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "green",    "expectedSrgb": [ 39, 174,  96], "x": 0.2625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "blue",     "expectedSrgb": [ 41, 128, 185], "x": 0.5125, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "yellow",   "expectedSrgb": [241, 196,  15], "x": 0.7625, "y": 0.10, "w": 0.225, "h": 0.80 }
+    ]
+  },
+  "qualityThresholds": {
+    "minBlurVariance": 25.0,
+    "maxGlareFraction": 0.04,
+    "maxShadowClippedFraction": 0.05,
+    "maxHighlightClippedFraction": 0.05,
+    "minMeanLuminance": 35.0,
+    "maxMeanLuminance": 225.0,
+    "minDynamicRange": 50.0,
+    "maxCalibrationResidualDeltaE": 12.0,
+    "minRegionConfidence": 0.45,
+    "minImageWidthPx": 480,
+    "minCardCoverageFraction": 0.05
+  },
+  "reactionWindow": {
+    "enabled": false,
+    "captureOffsetsSeconds": [],
+    "stabilityDeltaE": 1.5,
+    "observationNotes": "Marquis is a single-point spot test. Capture 30-60 seconds after reagent contact when colour has stabilised."
+  },
+  "decisionRegions": [
+    {
+      "label": "NEGATIVE",
+      "centreLab": [82.0, -1.0, 9.0],
+      "radiusDeltaE": 28.0,
+      "borderlineMarginDeltaE": 6.0
+    },
+    {
+      "label": "POSITIVE",
+      "centreLab": [25.0, 14.0, -30.0],
+      "radiusDeltaE": 32.0,
+      "borderlineMarginDeltaE": 6.0
+    },
+    {
+      "label": "POSITIVE",
+      "centreLab": [40.0, 35.0, 30.0],
+      "radiusDeltaE": 28.0,
+      "borderlineMarginDeltaE": 6.0
+    }
+  ],
+  "captureInstructions": [
+    "Add 1-2 drops of Marquis reagent onto a small sample on a white ceramic surface.",
+    "Wait 30-60 seconds for the colour to stabilise.",
+    "Open the Digital Card screen on a second device and place it beside the sample.",
+    "Frame so both the reaction area AND the digital reference card are inside their guides.",
+    "Use diffuse indoor light — avoid direct sunlight and camera flash.",
+    "Press CHECK FRAME until accepted, then press CAPTURE."
+  ],
+  "safetyNotes": [
+    "Marquis reagent contains concentrated sulfuric acid. Wear PPE: gloves, goggles, lab coat.",
+    "Dispose per your institution chemical waste procedures.",
+    "Purple/violet indicates opiates or MDMA. Orange indicates amphetamines. A positive is presumptive only.",
+    "Confirmatory GC-MS or HPLC analysis is mandatory before any legal action."
+  ]
+}

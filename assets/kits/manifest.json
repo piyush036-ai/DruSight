@@ -1,0 +1,10 @@
+{
+  "manifestVersion": "2",
+  "note": "Kit profiles bundled with this build. Every profile carries its own validationStatus string displayed verbatim in the app. Demo profiles removed — real forensic reagent profiles only.",
+  "profiles": [
+    "kit_marquis_v1.json",
+    "kit_scott_v1.json",
+    "kit_duquenois_v1.json",
+    "kit_mecke_v1.json"
+  ]
+}

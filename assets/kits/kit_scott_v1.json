@@ -1,0 +1,78 @@
+{
+  "kitId": "SCOTT-001",
+  "profileVersion": "1.0.0",
+  "manufacturer": "Scott Reagent (cobalt thiocyanate) — Standard forensic spot test",
+  "testName": "Scott Reagent Spot Test (Cocaine)",
+  "reagentType": "SCOTT_COLOURIMETRIC",
+  "validationStatus": "Prototype — colour regions from UNODC ST/NAR/42 (2013) Table 2, Scott (1973) J Forensic Sci, and Cole (2001) Microgram. Blue colouration indicates cocaine/crack cocaine presumptively. Not a validated diagnostic instrument.",
+  "lastVerifiedDate": "2026-01-01",
+  "documentationUrl": "https://www.unodc.org/documents/scientific/ST-NAR-42_Ebook.pdf",
+  "featureSchemaVersion": "features-0.1.0",
+  "calibrationVersion": "calib-0.1.0",
+  "modelId": "scott-001-clf",
+  "modelVersion": "1.0.0",
+  "referenceCard": {
+    "cardId": "DS-CARD-DIGITAL",
+    "version": "1.0.0",
+    "description": "Software-rendered 8-patch digital reference card displayed on-screen.",
+    "aspectRatio": 3.2,
+    "printNotes": "No printing required. Display on a second device beside the sample.",
+    "patches": [
+      { "id": "white",    "expectedSrgb": [235, 235, 235], "x": 0.0125, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "grey_75",  "expectedSrgb": [190, 190, 190], "x": 0.2625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "grey_50",  "expectedSrgb": [128, 128, 128], "x": 0.2625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "black",    "expectedSrgb": [ 40,  40,  40], "x": 0.7625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "red",      "expectedSrgb": [192,  57,  43], "x": 0.0125, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "green",    "expectedSrgb": [ 39, 174,  96], "x": 0.2625, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "blue",     "expectedSrgb": [ 41, 128, 185], "x": 0.5125, "y": 0.10, "w": 0.225, "h": 0.80 },
+      { "id": "yellow",   "expectedSrgb": [241, 196,  15], "x": 0.7625, "y": 0.10, "w": 0.225, "h": 0.80 }
+    ]
+  },
+  "qualityThresholds": {
+    "minBlurVariance": 25.0,
+    "maxGlareFraction": 0.04,
+    "maxShadowClippedFraction": 0.05,
+    "maxHighlightClippedFraction": 0.05,
+    "minMeanLuminance": 35.0,
+    "maxMeanLuminance": 225.0,
+    "minDynamicRange": 50.0,
+    "maxCalibrationResidualDeltaE": 12.0,
+    "minRegionConfidence": 0.45,
+    "minImageWidthPx": 480,
+    "minCardCoverageFraction": 0.05
+  },
+  "reactionWindow": {
+    "enabled": false,
+    "captureOffsetsSeconds": [],
+    "stabilityDeltaE": 2.0,
+    "observationNotes": "Scott is a two-step test. Capture after both reagent additions and the final blue colour has stabilised (approx 60 seconds)."
+  },
+  "decisionRegions": [
+    {
+      "label": "NEGATIVE",
+      "centreLab": [80.0, 0.0, 5.0],
+      "radiusDeltaE": 28.0,
+      "borderlineMarginDeltaE": 6.0
+    },
+    {
+      "label": "POSITIVE",
+      "centreLab": [38.0, -8.0, -42.0],
+      "radiusDeltaE": 32.0,
+      "borderlineMarginDeltaE": 6.0
+    }
+  ],
+  "captureInstructions": [
+    "Step 1: Add 5 drops of Solution A (cobalt thiocyanate) to a small sample. Blue = possibly cocaine.",
+    "Step 2: Add 5 drops of Solution B (HCl). Blue colour persists if cocaine present; turns pink if not.",
+    "Step 3: Add 5 drops of Solution C (CHCl3 layer). Blue organic layer = presumptive positive for cocaine.",
+    "Wait ~60 seconds after final step for colour to stabilise.",
+    "Display the Digital Reference Card on a second device beside the sample.",
+    "Frame both the reaction area and the digital card within their guides. Press CAPTURE."
+  ],
+  "safetyNotes": [
+    "Scott reagent contains hydrochloric acid and chloroform. Work in a ventilated area with PPE.",
+    "Chloroform is a suspected carcinogen. Minimise exposure and dispose per chemical waste rules.",
+    "Blue colouration is presumptive for cocaine/crack cocaine only. Many other substances give false positives.",
+    "Confirmatory laboratory analysis (GC-MS/NMR) is mandatory."
+  ]
+}
