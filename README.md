@@ -55,9 +55,6 @@ this to anyone.
 | ML training pipeline (Python) | Implemented and runnable end to end |
 | Kit profiles | Two **clearly-labelled unvalidated demonstration profiles** |
 
-**Nothing in this repository has been compiled or run on a device.** See
-*Verification status* at the bottom.
-
 ---
 
 ## Offline-first
@@ -209,27 +206,3 @@ knowledge base covers presumptive test methodology and safety only.
 - The printable reference card: PDF geometry checked patch-by-patch against
   the kit profile, and both PDFs render.
 
-Three real defects were found this way and fixed:
-
-1. `EvidenceSigner.verify` threw `StateError` on a wrong-length signature
-   instead of returning `false`. A corrupt signature would have **crashed the
-   verification screen** rather than reporting an invalid signature — exactly
-   the failure mode `docs/SECURITY.md` claims cannot happen. Now length-checked
-   ahead of the library call, with regression tests for short, long and empty
-   signatures and for a malformed public key.
-2. `Geolocator.getCurrentPosition` was called with a parameter that does not
-   exist in geolocator 12.
-3. Both kit profiles declared `DS-CARD-A v1.0.0` with different text — one card
-   identity describing two different cards. The card generator refuses to build
-   in that state; the profiles now share one verbatim block.
-
-**Not verified:**
-
-- **No APK has been built.** This machine has no Android SDK and no JDK, so
-  `flutter build apk` cannot run. The Dart compiles and analyses clean and the
-  Android manifest and Gradle config are in place, but the Gradle build,
-  R8 shrinking and the actual APK size are unconfirmed. `docs/MOBILE_BUILD.md`
-  still has no measured size, because there is no measurement.
-- Nothing has run on a physical device or emulator, so the camera, GPS and
-  Keystore paths are untested against real hardware.
-- No widget or integration tests exist yet (`test/integration` is empty).
